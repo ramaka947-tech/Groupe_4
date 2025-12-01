@@ -1,0 +1,59 @@
+body{
+    font-family: arial;
+    justify-content: center;
+    align-content: center;
+}
+h1{
+    text-align: center;
+    color: rgb(86, 96, 240);
+    margin-top: 80px;
+    padding-top: 10px;
+}
+.card{
+    display: flex;
+     gap: 10px;
+}
+.card1{  
+    flex-wrap: nowrap;
+    background-color: white;
+    width: 100%;
+    box-shadow:1px 1px 1px 2px #ada2a2;
+    padding-bottom: 15px;
+}
+h2,p{
+    text-align: center;
+}
+h2{
+    color: rgb(86, 96, 240);
+}
+table,th,td{
+    border-collapse: collapse;
+    background-color: white;
+}
+table{
+    width: 100%;
+    box-shadow: 1px 1px 4px  1px #ada2a2;
+}
+tr{
+    border: 1px solid rgb(238, 231, 231);
+    text-align: center;
+    height: 50px;
+    background-color: #f1f1f1;
+    
+}
+.th1 th{
+    background-color: rgb(86, 96, 240);
+    color: white;
+}
+.vert{
+    color: rgb(4, 66, 4);
+}
+.red{
+    color: red;
+}
+.orange{
+    color: rgb(202, 184, 20);
+}
+table{
+    margin-bottom: 40px;
+}
