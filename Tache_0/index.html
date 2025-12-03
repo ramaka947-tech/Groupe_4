@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="entete">
+        <h2 class="titre">Paramètres</h2>
+    </header>
+
+    
+    <input type="radio" name="onglets" id="tab1" checked>
+    <input type="radio" name="onglets" id="tab2">
+    <input type="radio" name="onglets" id="tab3">
+
+    <div class="menu-onglet">
+      <label for="tab1" class="bouton-onglet">Gestion des comptes rendus</label>
+      <label for="tab2" class="bouton-onglet">Gestion des rôles</label>
+      <label for="tab3" class="bouton-onglet">Gestion des données</label>
+    </div>
+
+    
+    <div class="contenu-tab" id="content1">
+      <section class="section comptes-rendus">
+
+        <div class="section-header">
+            <h2 class="titre-section">Gestion des comptes rendus</h2>
+        </div>
+
+        <div class="document-ajout">
+            <label for="toggleDocument" class="bouton bouton-principal">Ajouter un document</label>
+            <input type="checkbox" id="toggleDocument" class="cache">
+            
+            <form id="ajouterDocumentForm" class="formulaire-cache formulaire-document">
+
+                <label for="titre">Titre :</label>
+                <input type="text" class="champ" placeholder="Ex: Réunion Bureau Janvier 2024" required>
+
+                <label for="type">Type :</label>
+                <select name="type" id="type" class="selecteur">
+                    <option value="Assemblée Générale">Assemblée Générale</option>
+                    <option value="Réunion">Réunion</option>
+                    <option value="Décision">Décision</option>
+                    <option value="Autre">Autre</option>
+                </select>
+
+                <label for="date">Date :</label>
+                <input type="datetime-local" name="date" id="date" class="champ">
+
+                <label for="fichier">Format du fichier :</label>
+                <select name="format" id="format" class="selecteur">
+                  <option value="texte">Texte</option>
+                  <option value="pdf">PDF</option>
+                  <option value="image">Image</option>
+                </select>
+
+                <label for="description">Description</label>
+                <input type="text" class="champ" placeholder="Description du document">
+
+                <button type="submit" class="bouton bouton-valider">Ajouter</button>
+                <button type="reset" class="bouton bouton-annuler">Annuler</button>
+            </form>
+        </div>
+
+        <div class="filtres">
+            <label for="filtre">Filtres :</label>
+            <select id="type" class="selecteur">
+                <option value="">Tous les types</option>
+                <option value="Assemblée Générale">Assemblée Générale</option>
+                <option value="Réunion">Réunion</option>
+                <option value="Décision">Décision</option>
+                <option value="Autre">Autre</option>
+            </select>
+            <select id="date" class="selecteur">
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+            </select>
+        </div>
+            
+        <div class="liste-documents">
+
+            <div class="carte-document">
+                <h2 class="titre-doc">Assemblée Générale 2024</h2>
+                <span class="type-doc">Assemblée Générale</span>
+                <p class="date-doc">15/01/2024</p>
+                <p class="auteur-doc">Par Jean Président</p>
+                <p class="info-doc">Ordre du jour: bilan financier, élections, projets futurs...</p>
+                <div class="actions-doc">
+                    <button class="bouton-action"><i class="fa-regular fa-eye"></i> Voir</button>
+                    <button class="bouton-action"><i class="fa-solid fa-download"></i></button>
+                    <button class="bouton-action"><i class="fa-solid fa-share-nodes"></i></button>
+                </div>
+            </div>
+
+            <div class="carte-document">
+                <h2 class="titre-doc">Réunion Bureau Mars 2024</h2>
+                <span class="type-doc">Assemblée Générale</span>
+                <p class="date-doc">10/03/2024</p>
+                <p class="auteur-doc">Par Marie Secrétaire</p>
+                <p class="info-doc">Discussion sur les nouveaux projets et budget...</p>
+                <div class="actions-doc">
+                    <button class="bouton-action"><i class="fa-regular fa-eye"></i> Voir</button>
+                    <button class="bouton-action"><i class="fa-solid fa-download"></i></button>
+                    <button class="bouton-action"><i class="fa-solid fa-share-nodes"></i></button>
+                </div>
+            </div>
+
+        </div>
+      </section>
+    </div>
+
+    
+    <div class="contenu-tab" id="content2">
+      <section class="section roles">
+        <h2 class="titre-section">Gestion des rôles</h2>
+        
+        <div class="carte-role">
+            <h1 class="titre-role">Président</h1>
+            <p class="desc-role">Tous les droits sur la plateforme</p>
+            <span class="tag-role">Rôle par défaut</span>
+            <ul class="liste-permissions">
+                <li><strong>Membres :</strong> Voir – Modifier – Supprimer</li>
+                <li><strong>Documents :</strong> Voir – Modifier – Supprimer – Ajouter</li>
+                <li><strong>Cotisations :</strong> Voir – Modifier - </li>
+                <li><strong>Rôle :</strong> Voir – Modifier</li> 
+                <li><strong>Données :</strong> Exporter – Sauvegarder</li>
+            </ul>
+        </div>
+
+        <div class="carte-role">
+            <h1 class="titre-role">Secrétaire</h1>
+            <p class="desc-role">Gestion des membres et documents</p>
+            <span class="tag-role">Rôle par défaut</span>
+            <ul class="liste-permissions">
+                <li><strong>Membres :</strong> Voir – Modifier – Supprimer</li>
+                <li><strong>Documents :</strong> Voir – Modifier – Supprimer – Ajouter</li>
+                <li><strong>Cotisations :</strong> Voir</li>
+                <li><strong>Rôle :</strong> Voir</li>
+                <li><strong>Données :</strong> Voir</li>
+            </ul>
+        </div>
+
+        <div class="carte-role">
+            <h1 class="titre-role">Trésorier</h1>
+            <p class="desc-role">Gestion des cotisations et finances</p>
+            <span class="tag-role">Rôle par défaut</span>
+            <ul class="liste-permissions">
+                <li><strong>Membres :</strong> Modifier</li>
+                <li><strong>Documents :</strong> Ajouter – Modifier – Supprimer</li>
+                <li><strong>Cotisations :</strong> Voir – Modifier</li>
+                <li><strong>Rôle :</strong> Voir – Modifier</li>
+                <li><strong>Données :</strong> Exporter – Sauvegarder</li>
+            </ul>
+        </div>
+
+        <div class="carte-role">
+            <h1 class="titre-role">Membres</h1>
+            <p class="desc-role">Accès limité en lecture</p>
+            <span class="tag-role">Rôle par défaut</span>
+            <ul class="liste-permissions">
+                <li><strong>Membres :</strong> Voir</li>
+                <li><strong>Documents :</strong> Voir</li>
+                <li><strong>Cotisations :</strong> Voir</li>
+                <li><strong>Rôle :</strong> Voir</li>
+                <li><strong>Données :</strong> —</li>
+            </ul>
+        </div>
+
+        <div class="creer-role">
+            <label for="toggleRole" class="bouton bouton-principal">Créer un rôle</label>
+            <input type="checkbox" id="toggleRole" class="cache">
+            
+            <form id="CreerroleForm" class="formulaire-cache formulaire-role">
+                <label for="nomRole">Nom du rôle :</label>
+                <input type="text" class="champ" placeholder="Ex: Vice Président" required>
+
+                <label for="description">Description</label>
+                <input type="text" class="champ" placeholder="Description du rôle">
+
+                <label for="permissions">Permissions :</label>
+                <label><input type="checkbox"> Lecture</label>
+                <label><input type="checkbox"> Écriture</label>
+                <label><input type="checkbox"> Modification</label>
+                <label><input type="checkbox"> Suppression</label>
+
+                <button type="submit" class="bouton bouton-valider">Créer</button>
+                <button type="reset" class="bouton bouton-annuler">Annuler</button>
+            </form>
+        </div>
+
+      </section>
+    </div>
+
+    
+    <div class="contenu-tab" id="content3">
+      <section class="section donnees">
+        <h2 class="titre-section">Gestion des données</h2>
+
+        <div class="info-donnees">
+            <div class="carte-donnee">
+                <div class="icone-donnee">logo</div>
+                <div class="texte-donnee">
+                    <p>Taille des données</p>
+                    <p>1024 KB</p>
+                </div>
+            </div>
+
+            <div class="carte-donnee">
+                <div class="icone-donnee">logo</div>
+                <div class="texte-donnee">
+                    <p>Dernière sauvegarde</p>
+                    <p>03/12/2025</p>
+                </div>
+            </div>
+
+            <div class="carte-donnee">
+                <div class="icone-donnee">logo</div>
+                <div class="texte-donnee">
+                    <p>Sécurité</p>
+                    <p>Chiffrement actif</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-export">
+            <h3 class="titre-export">Export des données</h3>
+            <p class="desc-export">Exportez vos données au format PDF ou Excel</p>
+
+            <div class="carte-export">
+                <h2>Listes des membres</h2>
+                <p>Exporter tous les membres avec leurs informations</p>
+                <div class="actions-export">
+                    <button class="bouton-action">PDF</button>
+                    <button class="bouton-action">Excel</button>
+                </div>
+            </div>
+
+            <div class="carte-export">
+                <h2>Cotisations</h2>
+                <p>Exporter l'historique des cotisations</p>
+                <div class="actions-export">
+                    <button class="bouton-action">PDF</button>
+                    <button class="bouton-action">Excel</button>
+                </div>
+            </div>
+
+            <div class="carte-export">
+                <h2>Comptes-rendus</h2>
+                <p>Exporter les documents et rapports</p>
+                <div class="actions-export">
+                    <button class="bouton-action">PDF</button>
+                </div>
+            </div>
+
+            <div class="carte-export">
+                <h2>Rapport complet</h2>
+                <p>Export complet de toutes les données</p>
+                <div class="actions-export">
+                    <button class="bouton-action">Exporter en PDF</button>
+                    <button class="bouton-action">Exporter en Excel</button>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="sauvegarde-section">
+          <h3>Sauvegarde complète</h3>
+          <p>Créez une sauvegarde complète de toutes les données de l'association</p>
+          <button class="bouton-action">Créer une sauvegarde complète</button>
+        </div>
+
+        
+        <div class="protection-section">
+          <h3>Protection des données (RGPD)</h3>
+          <div class="protection-list">
+
+            <div class="protection-item">
+              <h4>Conformité RGPD locale</h4>
+              <p>Vos données respectent les normes de protection européennes</p>
+            </div>
+
+            <div class="protection-item">
+              <h4>Cryptage bout-en-bout</h4>
+              <p>Toutes les données sont chiffrées avec AES-256</p>
+            </div>
+
+            <div class="protection-item">
+              <h4>Hébergement local/Afrique</h4>
+              <p>Serveurs situés en Afrique pour une latence optimale</p>
+            </div>
+
+            <div class="protection-item">
+              <h4>Accès contrôlé par rôle</h4>
+              <p>Chaque utilisateur n'accède qu'aux données autorisées</p>
+            </div>
+
+            <div class="protection-item">
+              <h4>Sauvegardes multiples</h4>
+              <p>3 copies de vos données sur différents serveurs</p>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <footer class="pied-page"></footer> 
+</body>
+</html>
