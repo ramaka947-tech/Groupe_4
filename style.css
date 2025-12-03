@@ -58,6 +58,9 @@ oL li{
 }
 .btn{
     margin: 220px;
+    background-color: rgb(16, 16, 85);
+    color: white;
+    padding: 5px;
 }
     
 .B1{
@@ -68,4 +71,27 @@ oL li{
    color: blue;
     
 }
+footer{
+    background-color: darkblue;
+    padding: 30px;
+    color: white;
+    
+    
+}
+.T1{
+    display: flex;
+    gap: 200px;
+   
+    
+
+}
+h2{
+    text-align: start;
+}
+.T2{
+    margin-right: 3px;
+     text-align: center;
+     font-size: x-large;
+}
+
 
