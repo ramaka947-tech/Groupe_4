@@ -1,13 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-    
+    <title>Gestion des Membres - Dashboard</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
+    <div class="dashboard">
+
+        <header class="gestion-header">
+            <div class="header-info">
+                <i class="fas fa-users icon-gestion"></i>
+                <div>
+                    <h1>Gestion des Membres</h1>
+                    <p>Gérez vos membres, cotisations et présences</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="action-btn secondary"><i class="fas fa-file-csv"></i> Importer CSV</button>
+                <button class="action-btn secondary"><i class="fas fa-file-export"></i> Export CSV</button>
+                <button class="action-btn secondary"><i class="fas fa-file-pdf"></i> Export PDF</button>
+            </div>
+        </header>
+
+        <section class="stats-cards">
+            <div class="card">
+                <div class="card-content">
+                    <p class="stat-label">Total Membres</p>
+                    <p class="stat-value">3</p>
+                </div>
+                <i class="fas fa-user-friends card-icon blue-icon"></i> 
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <p class="stat-label">Membres Actifs</p>
+                    <p class="stat-value">1</p>
+                </div>
+                <i class="fas fa-user-check card-icon green-icon"></i>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <p class="stat-label">Total Cotisations</p>
+                    <p class="stat-value">100 000f cfa</p>
+                </div>
+                <i class="fas fa-dollar-sign card-icon purple-icon"></i>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <p class="stat-label">Taux Présence Moyen</p>
+                    <p class="stat-value">67%</p>
+                </div>
+                <i class="fas fa-chart-line card-icon orange-icon"></i> 
+            </div>
+        </section>
+
+        <section class="action-bar">
+            <div class="search-filter-group">
+                <div class="search-input">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Rechercher par nom, téléphone ou email...">
+                </div>
+                <button class="filter-btn">Tous les statuts <i class="fas fa-chevron-down"></i></button>
+                <button class="filter-btn">Tous les rôles <i class="fas fa-chevron-down"></i></button>
+            </div>
+
     
+            <section class="member-form">
+           
+                <button class="btn" onclick="document.getElementById('member-form').style.display='block'">AJOUTER</button>
+</section>
+</section>
+                <form id="member-form">
+            <div class="profile-photo-section">
+                <div class="photo-placeholder">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <a href="#" class="add-photo-link">Ajouter une photo</a>
+            </div>
+
+            <div class="form-group">
+                <label for="nom">Nom complet *</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="telephone">Téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                <div class="form-group half-width">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="profession">Profession *</label>
+                    <input type="text" id="profession" name="profession" required>
+                </div>
+                <div class="form-group half-width">
+                    <label for="date-adhesion">Date d'adhésion *</label>
+                    <div class="date-input-container">
+                        <input type="date" id="date-adhesion" name="date-adhesion" value="2025-12-03" required>
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="statut">Statut *</label>
+                    <select id="statut" name="statut" required>
+                        <option>Actif</option>
+                        <option>Inactif</option>
+                    </select>
+                </div>
+                <div class="form-group half-width">
+                    <label for="role">Rôle</label>
+                    <select id="role" name="role">
+                        <option>Membre</option>
+                        <option>Trésorier</option>
+                        <option>Secrétaire</option>
+                    </select>
+                </div>
+            </div>
+
+            </form>
+           
+    </div>
+</div>
+    </div>
+</div>
+
+        <p class="result-count">Trois Membre(s) Ajouté(es)</p>
+    
+    <section class="member-list">
+    <div class="member-content1">
+    <div class="member-card">
+        <div class="member-list">
+            <i class="fas fa-user-circle member-avatar"></i>
+            <div class="member-details">
+                <div class="member-info-top">
+                    <h2>Ablaye Ba</h2>
+                    <p class="member-profession">Ingénieure</p>
+                </div>
+                <div class="member-badges">
+                    <span class="badge badge-actif">actif</span>
+                    <span class="badge badge-role">Membre</span>
+                </div>
+                <p class="contact-line"><i class="fas fa-phone-alt"></i> +221 76 129 35 46</p>
+                <p class="contact-line"><i class="fas fa-envelope"></i> Ablaye.ba@gmail.com</p>
+            </div>
+        </div>
+        <div class="member-actions-footer">
+            <button class="action-footer-btn view"><i class="fas fa-eye"></i> Voir</button>
+            <button class="action-footer-btn edit"><i class="fas fa-pencil-alt"></i></button>
+            <button class="action-footer-btn delete"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <div class="member-content">
+            <i class="fas fa-user-circle member-avatar"></i>
+            <div class="member-details">
+                <div class="member-info-top">
+                    <h2>Rama Ka</h2>
+                    <p class="member-profession">Médecin</p>
+                </div>
+                <div class="member-badges">
+                    <span class="badge badge-actif">Inactive</span>
+                    <span class="badge badge-role treasurer">Trésorier</span>
+                </div>
+                <p class="contact-line"><i class="fas fa-phone-alt"></i> +221 77 456 88 99</p>
+                <p class="contact-line"><i class="fas fa-envelope"></i> rama.ka@gmail.com</p>
+            </div>
+        </div>
+        <div class="member-actions-footer">
+            <button class="action-footer-btn view"><i class="fas fa-eye"></i> Voir</button>
+            <button class="action-footer-btn edit"><i class="fas fa-pencil-alt"></i></button>
+            <button class="action-footer-btn delete"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+    
+    <div class="member-card">
+        <div class="member-content">
+            <i class="fas fa-user-circle member-avatar"></i>
+            <div class="member-details">
+                <div class="member-info-top">
+                    <h2>Mamadou Diallo</h2>
+                    <p class="member-profession">Avocate</p>
+                </div>
+                <div class="member-badges">
+                    <span class="badge badge-inactif">Suspendue</span>
+                    <span class="badge badge-role">Membre</span>
+                </div>
+                <p class="contact-line phone-only"><i class="fas fa-phone-alt"></i> +221 78 345 67 89</p>
+            </div>
+        </div>
+        <div class="member-actions-footer">
+            <button class="action-footer-btn view wide"><i class="fas fa-eye"></i> Voir</button>
+            <button class="action-footer-btn edit"><i class="fas fa-pencil-alt"></i></button>
+            <button class="action-footer-btn delete"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
