@@ -5,9 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
     
 </head>
 <body>
-    
+       <h1>CREER UN EVENEMENT </h1>
+    <header>
+    <div class="menu-buttons">
+      <button><a class="btn" href="#fo">Créer un événement</a></button> 
+       <a class="btn" href="#ev">Suivi Evenements</a>
+       <a class="btn" href="#inv">Invitations</a>
+    </div>
+    </header>
+
+    <section class="events-section" id="fo">
+<!-- Section : Créer -->
+ <div>
+
+ </div>
+        <fieldset>
+            <legend>
+                <h2>Créer un Événement</h2>
+            </legend>
+            <form>
+                <label><strong>Titre de l'événement</strong></label><br>
+                <input type="text" placeholder="Ex : Réunion de projet"><br><br>
+
+                <label><strong>Date</strong></label><br>
+                <input type="date"><br><br>
+
+                <label><strong>Lieu</strong></label><br>
+                <input type="text" placeholder="Ex : Salle 12"><br>
+                <br>
+                <button type="submit">Créer</button>
+            </form>
+        </fieldset>
+
+    </section>
+    <section class="events-section" id="ev">
+        <h2>Liste des Événements</h2>
+        <p>Voici l historique des Evenements deja ficeler</p>
+        <div class="event-card">
+            <div class="Lieu">
+                <h3>Assemblée Générale</h3>
+                <p><strong>Date :</strong> 20 Décembre 2025</p>
+                <p><strong>Lieu :</strong> Salle de conférence</p>
+                <p><strong>Invités :</strong> 50</p>
+                <p><strong>Présents :</strong> 42</p>
+                <p><strong>Taux de présence :</strong> 84%</p>
+            </div>
+            <div class="Lieu">
+                <h4>REUNION DES JEUNES LEADER</h4>
+                <p><strong>Date :</strong> 20 Décembre 2025</p>
+                <p><strong>Lieu :</strong> AMPHI THEATRE </p>
+                <p><strong>Invités :</strong> 150</p>
+                <p><strong>Présents :</strong>142</p>
+                <p><strong>Taux de présence :</strong> 95%</p>
+
+            </div>
+            <div class="Lieu">
+                <h3>Rencontre des Elus locaux</h3>
+                <p><strong>Date :</strong> 25 Décembre 2025</p>
+                <p><strong>Lieu :</strong> Salle de conférence</p>
+                <p><strong>Invités :</strong> 100</p>
+                <p><strong>Présents :</strong> 100</p>
+                <p><strong>Taux de présence :</strong> 100%</p>
+            </div>
+             
+
+        </div>
+      </section>
+      <section class="events-section" id="inv">
+<p>Soumetter votre demande d inscriptions</p>
+<input class="me" type="checkbox" name="coche" id="coche">
+<label class="me" for="coche">voulez vous vraiment assister</label><br>
+<input class="me" type="submit" value="Envoyer"><br>
+        <p>Voici la liste des presents<a href="#"> <br>Liste des Présents</a></p>
+
+      </section>
+        
+
+
 </body>
 </html>
